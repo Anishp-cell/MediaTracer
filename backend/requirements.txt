@@ -1,0 +1,34 @@
+# MediaTrace backend dependencies (Python 3.12, project .venv)
+#
+# PyTorch is NOT listed here: it must come from the CUDA 12.8 index (RTX 50-series / sm_120).
+# Install it first:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+# Do not add PyPI as an extra index for that step, or pip may pick a CPU-only wheel.
+# (CPU-only machines can use the default PyPI torch; the app falls back to CPU float32.)
+
+# Embeddings (google/embeddinggemma-2 needs sentence-transformers >= 6.1.0)
+sentence-transformers>=6.1.0
+transformers>=5.20
+
+# API
+fastapi
+uvicorn[standard]
+python-multipart
+
+# PDF / image processing
+pypdfium2
+pypdf
+pillow
+numpy
+
+# Video + audio decoding (PyAV wheels bundle FFmpeg)
+av
+
+# Office documents and spreadsheets
+python-docx
+python-pptx
+openpyxl
+
+# Tests
+pytest
+httpx
