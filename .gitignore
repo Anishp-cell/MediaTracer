@@ -1,0 +1,74 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python caches / build artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# Node
+node_modules/
+frontend/dist/
+npm-debug.log*
+
+# Locally extracted wheels (e.g. the cached CUDA torch wheel)
+wheels/
+*.whl
+
+# Generated demo corpus and evaluation index (rebuild with scripts/)
+data/demo_corpus/
+data/eval/
+data/judge_demo/
+
+# User uploads and generated indexes (keep the directories themselves)
+data/uploads/*
+!data/uploads/.gitkeep
+data/index/*
+!data/index/.gitkeep
+*.sqlite
+*.sqlite3
+*.db
+
+# Model weights and caches
+.cache/
+hf_cache/
+models/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.onnx
+*.gguf
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.huggingface/
+
+# Graphify: commit the graph artifacts, not the extraction cache
+graphify-out/cache/
+graphify-out/.graphify_labels.pending.json
+
+# Local Claude Code machine config and third-party skill copies
+.claude/settings.json
+.claude/settings.local.json
+.claude/skills/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
