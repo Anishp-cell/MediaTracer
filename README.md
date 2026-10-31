@@ -19,6 +19,56 @@ Everything runs on your machine; no file leaves it.
 
 ---
 
+## 📱 Coming to Android: MediaTrace on Google Play
+
+We are bringing MediaTrace directly to your phone as a **daily-use, privacy-first mobile companion**. 
+
+Most phone galleries are cluttered with thousands of photos, screenshots, and videos that are impossible to find when you need them. Standard gallery search forces you to remember dates, albums, or exact file names. MediaTrace replaces endless scrolling with **instant, natural recall** — just describe what you remember, and your phone finds it in milliseconds.
+
+### ✨ Key Features for Daily Use
+
+* 🔍 **Search by What You Remember:**  
+  Type in plain everyday language. Search for *"cat sleeping in a shoebox"*, *"receipt on blue paper from the bicycle shop"*, *"mom laughing at the dinner table"*, or *"whiteboard diagram from work"*. You never have to tag a photo manually.
+
+* ⏱️ **Jump Straight to the Exact Moment in Videos:**  
+  No more scrubbing through a 10-minute video to find a 5-second highlight. Search *"blowing out birthday candles"* or *"dog jumping into water"*, and MediaTrace opens the video directly at that exact second.
+
+* 🗣️ **One-Tap Voice Search:**  
+  Hands full? Just tap the microphone and speak your query naturally: *"show me sunset photos from our summer trip"*.
+
+* 📁 **Smart Living Albums:**  
+  Create dynamic albums defined by meaning rather than dates. Type *"Healthy recipes"*, *"Concerts"*, or *"Coffee shop moments"*, and MediaTrace keeps that album continuously updated as you capture new media.
+
+* 👥 **People & Face Grouping:**  
+  Group your memories by the people who matter most. Tap a friend or family member's face to see every photo and video with them, or search *"Alex playing tennis"*.
+
+* 📍 **Location & Landmark Search:**  
+  Search by places or landmarks (*"photos in Paris"*, *"beach holiday"*, *"mountain hike"*), with an interactive map view of your photo history.
+
+* 🔄 **Reverse Image Search & Share Integration:**  
+  See a picture in WhatsApp, Instagram, or a web browser? Tap Android's **Share** button and send it to MediaTrace to instantly find similar photos or original high-res versions in your library.
+
+* 🧹 **One-Tap Duplicate & Clutter Cleaner:**  
+  Free up phone storage effortlessly. MediaTrace spots burst shots, duplicate downloads, and repeated WhatsApp memes so you can declutter in one tap.
+
+* ⚡ **Home Screen Quick Search Widget:**  
+  Search your personal media library or tap the voice mic directly from your home screen without even launching the full app.
+
+* 🔒 **100% Private, Completely Offline:**  
+  Your personal memories never leave your device. No accounts, no cloud uploads, no subscriptions, and zero tracking. Search works anywhere, even in airplane mode.
+
+* 🔋 **Battery-Smart Background Scanning:**  
+  New photos are indexed quietly in the background without draining your battery. Heavy scanning automatically pauses when you're using your phone and resumes when plugged in.
+
+### 🗺️ Mobile Rollout Plan
+
+* **Version 1.0 (Google Play Store):**  
+  Full focus on your daily **Phone Gallery & Camera Roll** (Photos + Videos) with instant semantic search, video moments, voice search, face grouping, smart albums, home screen widget, and storage cleaner.
+* **Version 2.0 (Expansion):**  
+  Expanding search to **all phone files** — PDF documents, notes, spreadsheets, voice notes, WhatsApp chat media folders, and Google Drive cloud storage.
+
+---
+
 ## Verified features
 
 Verified on the reference machine (Windows 11, NVIDIA RTX 5050 Laptop GPU, Python 3.10.11,

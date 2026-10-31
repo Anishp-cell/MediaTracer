@@ -58,9 +58,8 @@ models/
 *.key
 .huggingface/
 
-# Graphify: commit the graph artifacts, not the extraction cache
-graphify-out/cache/
-graphify-out/.graphify_labels.pending.json
+# User test directories (local evaluation data)
+TEST/
 
 # Local Claude Code machine config and third-party skill copies
 .claude/settings.json
