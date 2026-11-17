@@ -1,12 +1,13 @@
 /* ==========================================================================
-   MediaTrace: Google Photos Inspired Visual Gallery & Search
-   Colorway: Nordic Pine & Warm Amber Sand (Unique, Clean, Modern)
+   MediaTrace: Solid Two-Tone Palette (Buttermilk #FFF2BA & Midnight Blue #0F3C65)
+   Strictly Solid Colors, No Gradients, No Glows
    ========================================================================== */
 
 .app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: var(--bg);
 }
 
 main {
@@ -14,13 +15,13 @@ main {
   width: 100%;
   max-width: 1320px;
   margin: 0 auto;
-  padding: 20px 24px 64px;
+  padding: 24px 24px 64px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 28px;
 }
 
-/* ---------- Top Bar (Google Photos Minimalist Header) ---------- */
+/* ---------- Top Bar (Solid Midnight Blue #0F3C65) ---------- */
 .topbar {
   position: sticky;
   top: 0;
@@ -28,12 +29,9 @@ main {
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 12px 28px;
-  background: color-mix(in srgb, var(--surface) 82%, transparent);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-subtle);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+  padding: 14px 28px;
+  background-color: var(--surface-2);
+  border-bottom: 1.5px solid var(--border);
 }
 
 .brand {
@@ -41,25 +39,19 @@ main {
   align-items: center;
   gap: 12px;
   text-decoration: none;
-  color: var(--text);
+  color: var(--buttermilk);
   user-select: none;
 }
 
 .brand-icon {
-  width: 38px;
-  height: 38px;
-  border-radius: var(--radius);
-  background: var(--accent-gradient);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background-color: var(--buttermilk);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
-  box-shadow: 0 4px 14px var(--accent-glow);
-  transition: transform var(--transition-bounce);
-}
-
-.brand:hover .brand-icon {
-  transform: scale(1.06) rotate(4deg);
+  color: var(--midnight);
 }
 
 .brand-text {
@@ -68,30 +60,27 @@ main {
 }
 
 .brand-title {
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 800;
-  letter-spacing: -0.03em;
-  background: var(--accent-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.02em;
+  color: var(--buttermilk);
 }
 
 .brand-subtitle {
   font-size: 11px;
-  font-weight: 600;
-  color: var(--muted);
-  letter-spacing: 0.05em;
+  font-weight: 700;
+  color: var(--muted-on-dark);
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
-/* View Navigation Pills */
+/* Topbar Navigation Tabs (Pill Switcher) */
 .tabs {
   display: flex;
-  gap: 4px;
-  background: var(--surface-2);
+  gap: 6px;
+  background-color: var(--surface-2);
   padding: 4px;
   border-radius: var(--radius-pill);
-  border: 1px solid var(--border-subtle);
 }
 
 .tabs button {
@@ -102,53 +91,32 @@ main {
   border-radius: var(--radius-pill);
   border: 0;
   background: transparent;
-  color: var(--text-2);
+  color: var(--text-on-dark);
   font-size: 13.5px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
-  transition: all var(--transition);
+  transition: background-color var(--transition), color var(--transition);
 }
 
 .tabs button:hover {
-  color: var(--text);
+  background-color: var(--surface-3);
+  color: #ffffff;
 }
 
 .tabs button.active {
-  background: var(--surface);
-  color: var(--accent);
-  font-weight: 700;
-  box-shadow: var(--shadow-sm);
+  background-color: var(--buttermilk);
+  color: var(--midnight);
+  font-weight: 800;
 }
 
 .top-right {
   margin-left: auto;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
-/* Theme Toggle Button */
-.theme-toggle-btn {
-  width: 38px;
-  height: 38px;
-  border-radius: var(--radius-pill);
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text-2);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all var(--transition);
-}
-
-.theme-toggle-btn:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  transform: rotate(20deg);
-}
-
-/* Demo Mode Banner */
+/* Demo Banner */
 .demo-banner {
   display: flex;
   align-items: center;
@@ -156,16 +124,11 @@ main {
   gap: 16px;
   padding: 12px 20px;
   border-radius: var(--radius);
-  background: var(--accent-soft);
-  border: 1px solid var(--accent);
-  color: var(--text);
-  font-size: 13.5px;
-  animation: slideDown 0.25s ease-out;
-}
-
-@keyframes slideDown {
-  from { opacity: 0; transform: translateY(-8px); }
-  to { opacity: 1; transform: translateY(0); }
+  background-color: var(--surface);
+  border: 1.5px solid var(--border-on-midnight);
+  color: var(--buttermilk);
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .demo-banner-content {
@@ -176,17 +139,17 @@ main {
 
 .demo-badge {
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
-  padding: 3px 9px;
+  padding: 3px 10px;
   border-radius: var(--radius-pill);
-  background: var(--accent);
-  color: var(--accent-ink);
+  background-color: var(--buttermilk);
+  color: var(--midnight);
   letter-spacing: 0.05em;
   flex: none;
 }
 
-/* ---------- Buttons & Action Pills ---------- */
+/* ---------- Solid Buttons & Pills ---------- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -194,50 +157,41 @@ main {
   gap: 8px;
   padding: 8px 18px;
   border-radius: var(--radius-pill);
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text);
-  cursor: pointer;
+  border: 2px solid transparent;
   font-size: 13.5px;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   white-space: nowrap;
-  transition: all var(--transition);
-}
-
-.btn:hover {
-  border-color: var(--border-hover);
-  background: var(--surface-2);
-  transform: translateY(-1px);
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition), border-color var(--transition);
 }
 
 .btn:disabled {
-  opacity: 0.5;
+  opacity: 0.45;
   cursor: not-allowed;
-  transform: none;
 }
 
+/* Primary Button: Solid Buttermilk with Midnight text */
 .btn.primary {
-  background: var(--accent-gradient);
-  color: var(--accent-ink);
-  border-color: transparent;
-  box-shadow: 0 4px 14px var(--accent-glow);
+  background-color: var(--buttermilk);
+  color: var(--midnight);
+  border-color: var(--buttermilk);
 }
 
-.btn.primary:hover {
-  filter: brightness(1.08);
-  box-shadow: 0 6px 18px var(--accent-glow);
+.btn.primary:hover:not(:disabled) {
+  background-color: var(--buttermilk-hover);
+  border-color: var(--buttermilk-hover);
 }
 
 .btn.primary-subtle {
-  background: var(--accent-soft);
-  color: var(--accent);
-  border-color: transparent;
+  background-color: var(--surface-2);
+  color: var(--buttermilk);
+  border-color: var(--border-on-midnight);
 }
 
-.btn.primary-subtle:hover {
-  background: var(--accent);
-  color: var(--accent-ink);
+.btn.primary-subtle:hover:not(:disabled) {
+  background-color: var(--buttermilk);
+  color: var(--midnight);
 }
 
 .btn.small {
@@ -246,12 +200,13 @@ main {
 }
 
 .btn.ghost {
-  background: transparent;
-  border-color: transparent;
+  background-color: transparent;
+  color: var(--buttermilk);
+  border: 1.5px solid var(--border-on-midnight);
 }
 
-.btn.ghost:hover {
-  background: var(--surface-2);
+.btn.ghost:hover:not(:disabled) {
+  background-color: var(--surface-2);
 }
 
 .icon-btn {
@@ -263,14 +218,13 @@ main {
   border-radius: var(--radius-pill);
   border: 0;
   background: transparent;
-  color: var(--text-2);
+  color: var(--buttermilk);
   cursor: pointer;
-  transition: all var(--transition);
+  transition: background-color var(--transition);
 }
 
 .icon-btn:hover {
-  background: var(--surface-2);
-  color: var(--text);
+  background-color: var(--surface-2);
 }
 
 .pill {
@@ -280,32 +234,22 @@ main {
   padding: 6px 14px;
   border-radius: var(--radius-pill);
   font-size: 12.5px;
-  font-weight: 500;
-  background: var(--surface-2);
-  color: var(--text-2);
-  border: 1px solid var(--border-subtle);
-  transition: all var(--transition);
-}
-
-.pill.ok {
-  background: var(--accent-soft);
-  color: var(--accent);
-  font-weight: 600;
-  border-color: transparent;
+  font-weight: 700;
+  background-color: var(--surface-2);
+  color: var(--buttermilk);
+  border: 1.5px solid var(--border-on-midnight);
 }
 
 .pill.ok .dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 10px var(--accent);
+  background-color: var(--buttermilk);
 }
 
 .pill.err {
-  color: var(--err);
-  background: var(--err-soft);
-  border-color: transparent;
+  color: #ffb4b4;
+  border-color: #ffb4b4;
 }
 
 .pill-btn {
@@ -319,9 +263,9 @@ main {
   font-size: 11.5px;
   padding: 2px 8px;
   border-radius: var(--radius-pill);
-  background: var(--surface-2);
-  color: var(--text-2);
-  font-weight: 700;
+  background-color: var(--surface-3);
+  color: var(--buttermilk);
+  font-weight: 800;
 }
 
 .spin {
@@ -332,62 +276,60 @@ main {
   to { transform: rotate(360deg); }
 }
 
-/* ---------- Google Photos Style Hero & Pill Searchbar ---------- */
+/* ---------- Hero & Search (Solid Buttermilk Canvas) ---------- */
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 22px;
-  padding: 44px 0 16px;
+  gap: 20px;
+  padding: 36px 0 12px;
   text-align: center;
-  transition: all var(--transition);
 }
 
 .hero.compact {
-  padding: 8px 0 6px;
+  padding: 8px 0 4px;
 }
 
 .hero-tagline {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 5px 16px;
+  padding: 6px 18px;
   border-radius: var(--radius-pill);
-  background: var(--highlight-soft);
-  color: var(--highlight);
-  font-size: 12.5px;
-  font-weight: 700;
-  letter-spacing: 0.03em;
+  background-color: var(--midnight);
+  color: var(--buttermilk);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
 .hero h1 {
-  font-size: clamp(32px, 5vw, 50px);
-  font-weight: 800;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 900;
   letter-spacing: -0.03em;
-  color: var(--text);
+  color: var(--buttermilk);
   max-width: 860px;
   line-height: 1.15;
 }
 
-.gradient-text {
-  background: var(--accent-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.hero h1 .gradient-text {
+  color: var(--buttermilk);
 }
 
 .lede {
   max-width: 640px;
   margin: 0;
-  color: var(--text-2);
+  color: var(--muted-on-dark);
   font-size: 16.5px;
+  font-weight: 500;
   line-height: 1.6;
 }
 
-/* Floating Google Photos Search Bar */
+/* Solid Midnight Blue Search Bar */
 .searchbar-container {
   width: 100%;
-  max-width: 760px;
+  max-width: 780px;
   position: relative;
 }
 
@@ -397,20 +339,14 @@ main {
   align-items: center;
   gap: 12px;
   padding: 6px 8px 6px 22px;
-  background: var(--surface);
-  border: 1.5px solid var(--border);
+  background-color: var(--midnight);
+  border: 2px solid var(--midnight);
   border-radius: var(--radius-pill);
   box-shadow: var(--shadow-search);
-  transition: all var(--transition);
-}
-
-.searchbar:focus-within {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 4px var(--accent-soft), 0 18px 36px -4px rgba(13, 148, 136, 0.2);
 }
 
 .search-icon-decor {
-  color: var(--accent);
+  color: var(--buttermilk);
   flex: none;
 }
 
@@ -420,42 +356,42 @@ main {
   border: 0;
   background: transparent;
   font-size: 16.5px;
+  font-weight: 500;
   padding: 11px 0;
   outline: none;
-  color: var(--text);
+  color: var(--buttermilk);
 }
 
 .searchbar input::placeholder {
-  color: var(--muted);
+  color: var(--muted-on-dark);
 }
 
 .search-clear-btn {
-  color: var(--muted);
+  color: var(--muted-on-dark);
 }
 
 .search-clear-btn:hover {
-  color: var(--text);
+  color: var(--buttermilk);
 }
 
 .kbd-shortcut {
-  font-size: 11.5px;
-  font-weight: 700;
+  font-size: 11px;
+  font-weight: 800;
   font-family: var(--font-mono);
-  color: var(--muted);
-  background: var(--surface-2);
+  color: var(--midnight);
+  background-color: var(--buttermilk);
   padding: 3px 8px;
   border-radius: var(--radius-pill);
-  border: 1px solid var(--border);
   user-select: none;
 }
 
-/* Category Filter Chips (Google Photos Tonal Pills) */
+/* Solid Filter Chips */
 .filters {
   width: 100%;
-  max-width: 760px;
+  max-width: 780px;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
   align-items: center;
   justify-content: center;
 }
@@ -468,41 +404,44 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 7px 14px;
+  padding: 7px 16px;
   border-radius: var(--radius-pill);
   font-size: 13px;
-  font-weight: 500;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text-2);
+  font-weight: 700;
+  border: 1.5px solid var(--border-on-midnight);
+  background-color: var(--surface);
+  color: var(--buttermilk);
   cursor: pointer;
-  transition: all var(--transition);
+  transition: background-color var(--transition), color var(--transition), border-color var(--transition);
 }
 
 .chip:hover {
-  border-color: var(--border-hover);
-  color: var(--text);
-  background: var(--surface-2);
-  transform: translateY(-1px);
+  background-color: var(--surface-3);
+  color: var(--buttermilk);
+  border-color: var(--buttermilk);
+}
+
+.chip:hover .count {
+  background-color: var(--buttermilk);
+  color: var(--midnight);
 }
 
 .chip.on {
-  background: var(--accent-soft);
-  border-color: var(--accent);
-  color: var(--accent);
-  font-weight: 700;
+  background-color: var(--buttermilk);
+  color: var(--midnight);
+  border-color: var(--buttermilk);
 }
 
 .chip.on .count {
-  background: var(--accent);
-  color: var(--accent-ink);
+  background-color: var(--midnight);
+  color: var(--buttermilk);
 }
 
 .segmented {
   display: inline-flex;
-  border: 1px solid var(--border);
+  border: 2px solid var(--midnight);
   border-radius: var(--radius-pill);
-  background: var(--surface-2);
+  background-color: var(--midnight);
   padding: 3px;
   gap: 2px;
 }
@@ -511,19 +450,17 @@ main {
   border: 0;
   padding: 5px 14px;
   font-size: 12.5px;
-  font-weight: 500;
+  font-weight: 700;
   background: transparent;
   cursor: pointer;
-  color: var(--text-2);
+  color: var(--buttermilk);
   border-radius: var(--radius-pill);
-  transition: all var(--transition);
+  transition: background-color var(--transition), color var(--transition);
 }
 
 .segmented button.on {
-  background: var(--surface);
-  color: var(--text);
-  font-weight: 700;
-  box-shadow: var(--shadow-sm);
+  background-color: var(--buttermilk);
+  color: var(--midnight);
 }
 
 /* Example Search Pills */
@@ -533,34 +470,38 @@ main {
   justify-content: center;
   align-items: center;
   gap: 6px 8px;
-  max-width: 760px;
+  max-width: 780px;
   font-size: 13.5px;
 }
 
+.examples .small {
+  color: var(--muted-on-dark);
+  font-weight: 700;
+}
+
 .example-tag {
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text-2);
-  padding: 5px 12px;
+  border: 1.5px solid var(--border-on-midnight);
+  background-color: var(--surface);
+  color: var(--buttermilk);
+  padding: 5px 14px;
   border-radius: var(--radius-pill);
   font-size: 12.5px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
-  transition: all var(--transition);
+  transition: background-color var(--transition), border-color var(--transition);
 }
 
 .example-tag:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  background: var(--accent-soft);
-  transform: translateY(-1px);
+  background-color: var(--buttermilk);
+  color: var(--midnight);
+  border-color: var(--buttermilk);
 }
 
-/* ---------- Google Photos Visual Media Card Grid ---------- */
+/* ---------- Results Section & Cards (Solid Midnight Blue Cards) ---------- */
 .results-section {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 20px;
 }
 
 .results-head {
@@ -569,14 +510,15 @@ main {
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
-  padding: 4px 4px;
-  color: var(--text-2);
-  font-size: 14px;
+  padding: 4px;
+  color: var(--muted-on-dark);
+  font-size: 14.5px;
+  font-weight: 600;
 }
 
 .results-count-text strong {
-  color: var(--text);
-  font-weight: 700;
+  color: var(--buttermilk);
+  font-weight: 900;
 }
 
 .results-actions-bar {
@@ -587,59 +529,56 @@ main {
 
 .view-mode-toggle {
   display: inline-flex;
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--border-on-midnight);
   border-radius: var(--radius-pill);
-  padding: 3px;
-  background: var(--surface-2);
+  padding: 2px;
+  background-color: var(--surface);
 }
 
 .view-mode-toggle button {
   border: 0;
   background: transparent;
-  color: var(--text-2);
+  color: var(--muted-on-dark);
   padding: 5px 10px;
   border-radius: var(--radius-pill);
   cursor: pointer;
   display: flex;
   align-items: center;
-  transition: all var(--transition);
 }
 
 .view-mode-toggle button.active {
-  background: var(--surface);
-  color: var(--accent);
-  box-shadow: var(--shadow-sm);
+  background-color: var(--buttermilk);
+  color: var(--midnight);
 }
 
 /* Gallery Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-  gap: 22px;
+  gap: 24px;
 }
 
 .grid.list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
-/* Photo Card (Visual Hero) */
+/* Solid Midnight Blue Photo Card */
 .photo-card {
   display: flex;
   flex-direction: column;
-  background: var(--surface-card);
+  background-color: var(--surface);
   border-radius: var(--radius-card);
   overflow: hidden;
+  border: 1.5px solid var(--border-on-midnight);
   box-shadow: var(--shadow-card);
-  border: 1px solid var(--border);
-  transition: all var(--transition);
+  transition: transform var(--transition), border-color var(--transition);
 }
 
 .photo-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-card-hover);
-  border-color: var(--border-hover);
+  border-color: rgba(255, 242, 186, 0.55);
 }
 
 .photo-card.list-mode {
@@ -647,17 +586,17 @@ main {
   align-items: stretch;
 }
 
-/* Photo Canvas */
 .photo-canvas {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 11;
-  background: var(--surface-2);
+  background-color: var(--surface-2);
   overflow: hidden;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom: 1px solid var(--border);
 }
 
 .photo-card.list-mode .photo-canvas {
@@ -670,14 +609,13 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform var(--transition-bounce);
+  transition: transform var(--transition);
 }
 
 .photo-card:hover .photo-canvas img {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
-/* Fallback for documents/audio without preview */
 .photo-canvas-fallback {
   display: flex;
   flex-direction: column;
@@ -691,29 +629,20 @@ main {
 }
 
 .canvas-icon-bubble {
-  width: 60px;
-  height: 60px;
+  width: 58px;
+  height: 58px;
   border-radius: var(--radius);
+  background-color: var(--surface-3);
+  color: var(--buttermilk);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform var(--transition);
 }
-
-.photo-card:hover .canvas-icon-bubble {
-  transform: scale(1.08);
-}
-
-.canvas-icon-bubble.family-bg-image { background: var(--family-image-soft); }
-.canvas-icon-bubble.family-bg-video { background: var(--family-video-soft); }
-.canvas-icon-bubble.family-bg-document { background: var(--family-document-soft); }
-.canvas-icon-bubble.family-bg-audio { background: var(--family-audio-soft); }
-.canvas-icon-bubble.family-bg-spreadsheet { background: var(--family-spreadsheet-soft); }
 
 .fallback-text {
   margin: 0;
-  font-size: 12px;
-  color: var(--text-2);
+  font-size: 12.5px;
+  color: #ffffff;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -721,7 +650,7 @@ main {
   line-height: 1.5;
 }
 
-/* Floating Glassmorphic Badges Overlay on Media */
+/* Floating Solid Badges */
 .floating-top-row {
   position: absolute;
   top: 10px;
@@ -748,45 +677,43 @@ main {
   pointer-events: auto;
 }
 
+/* Solid Glass-Pill replacement: Solid Midnight Blue and Buttermilk */
 .glass-pill {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  padding: 3px 10px;
+  gap: 6px;
+  padding: 4px 12px;
   border-radius: var(--radius-pill);
   font-size: 11.5px;
-  font-weight: 700;
-  background: rgba(14, 21, 18, 0.72);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  font-weight: 800;
+  background-color: var(--midnight);
+  color: var(--buttermilk);
+  border: 1.5px solid var(--border-on-midnight);
 }
 
 .glass-pill.rank-pill {
-  background: rgba(13, 148, 136, 0.85);
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.25);
+  background-color: var(--buttermilk);
+  color: var(--midnight);
+  border-color: var(--buttermilk);
 }
 
 .glass-pill.strength-pill .pill-dot {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
+  background-color: var(--buttermilk);
 }
 
 .glass-pill.strength-pill.strong .pill-dot {
-  background: #34d399;
-  box-shadow: 0 0 8px #34d399;
+  background-color: #4ade80;
 }
 
 .glass-pill.strength-pill.moderate .pill-dot {
-  background: #fbbf24;
+  background-color: #facc15;
 }
 
 .glass-pill.strength-pill.weak .pill-dot {
-  background: #94a3b8;
+  background-color: #94a3b8;
 }
 
 .glass-pill.location-pill {
@@ -800,30 +727,26 @@ main {
   width: 32px;
   height: 32px;
   border-radius: var(--radius-pill);
-  background: rgba(14, 21, 18, 0.72);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background-color: var(--buttermilk);
+  color: var(--midnight);
+  border: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all var(--transition);
+  transition: transform var(--transition);
 }
 
 .glass-btn:hover {
-  background: var(--accent);
-  color: #fff;
   transform: scale(1.1);
 }
 
-/* Card Information Beneath the Canvas */
+/* Card Information Inside Midnight Blue Card */
 .photo-info {
   padding: 16px 18px 18px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   flex: 1;
 }
 
@@ -844,8 +767,8 @@ main {
 
 .photo-title-wrap h3 {
   font-size: 15px;
-  font-weight: 600;
-  color: var(--text);
+  font-weight: 700;
+  color: var(--buttermilk);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -853,9 +776,9 @@ main {
 
 .score-percentage {
   font-size: 12px;
-  font-weight: 700;
-  color: var(--accent);
-  background: var(--accent-soft);
+  font-weight: 800;
+  color: var(--midnight);
+  background-color: var(--buttermilk);
   padding: 2px 8px;
   border-radius: var(--radius-pill);
 }
@@ -868,8 +791,8 @@ main {
 
 .tag {
   font-size: 11px;
-  font-weight: 600;
-  padding: 2px 9px;
+  font-weight: 700;
+  padding: 3px 10px;
   border-radius: var(--radius-pill);
   display: inline-flex;
   align-items: center;
@@ -877,20 +800,21 @@ main {
 }
 
 .tag.tonal-tag {
-  background: var(--surface-2);
-  color: var(--text-2);
+  background-color: var(--surface-2);
+  color: var(--buttermilk);
+  border: 1px solid var(--border-on-midnight);
 }
 
 .tag.subtle-tag {
-  background: transparent;
-  border: 1px dashed var(--border);
-  color: var(--muted);
+  background-color: transparent;
+  border: 1px dashed var(--border-on-midnight);
+  color: var(--muted-on-dark);
 }
 
 .photo-snippet {
   margin: 0;
   font-size: 12.5px;
-  color: var(--text-2);
+  color: #ffffff;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -912,48 +836,100 @@ main {
   padding: 6px 14px;
   border-radius: var(--radius-pill);
   font-size: 12.5px;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   cursor: pointer;
-  border: 1px solid transparent;
-  transition: all var(--transition);
+  border: 1.5px solid transparent;
+  transition: background-color var(--transition), color var(--transition);
 }
 
 .action-pill.primary {
-  background: var(--surface-2);
-  color: var(--text);
-  border-color: var(--border-subtle);
+  background-color: var(--buttermilk);
+  color: var(--midnight);
+  border-color: var(--buttermilk);
 }
 
 .action-pill.primary:hover {
-  background: var(--accent-soft);
-  color: var(--accent);
-  border-color: var(--accent);
+  background-color: var(--buttermilk-hover);
 }
 
 .action-pill.ghost {
-  background: transparent;
-  color: var(--muted);
+  background-color: transparent;
+  color: var(--buttermilk);
+  border-color: var(--border-on-midnight);
 }
 
 .action-pill.ghost:hover {
-  color: var(--text);
-  background: var(--surface-2);
+  background-color: var(--surface-2);
 }
 
-/* ---------- Family Colors for Icons ---------- */
-.family-icon.family-image { color: var(--family-image); }
-.family-icon.family-video { color: var(--family-video); }
-.family-icon.family-document { color: var(--family-document); }
-.family-icon.family-audio { color: var(--family-audio); }
-.family-icon.family-spreadsheet { color: var(--family-spreadsheet); }
+/* Family Icons */
+.family-icon {
+  color: var(--buttermilk);
+}
+
+/* ---------- Jobs Bar ---------- */
+.jobbar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px 12px;
+  align-items: center;
+  padding: 12px 18px;
+  border: 2px solid var(--midnight);
+  border-radius: var(--radius);
+  background-color: var(--midnight);
+  color: var(--buttermilk);
+}
+
+.jobbar-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 0;
+  color: var(--buttermilk);
+}
+
+.jobbar .progress {
+  grid-column: 1 / 2;
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background-color: var(--surface-2);
+  overflow: hidden;
+}
+
+.jobbar .progress span {
+  display: block;
+  height: 100%;
+  background-color: var(--buttermilk);
+  transition: width 0.3s;
+}
+
+.jobbar.failed .progress span {
+  background-color: var(--err);
+}
+
+.jobbar > .btn, .jobbar > .icon-btn {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+.job-errors {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding-left: 18px;
+  color: #ffb4b4;
+  font-size: 13px;
+}
 
 /* ---------- Collection ---------- */
 .collection {
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background-color: var(--midnight);
+  border: 2px solid var(--midnight);
   border-radius: var(--radius-card);
   padding: 24px;
+  color: var(--buttermilk);
   box-shadow: var(--shadow-card);
 }
 
@@ -971,11 +947,12 @@ main {
   display: flex;
   align-items: center;
   gap: 10px;
+  color: var(--buttermilk);
 }
 
 .table-wrap {
   overflow-x: auto;
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--border-on-midnight);
   border-radius: var(--radius);
 }
 
@@ -990,21 +967,22 @@ th {
   font-size: 11.5px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--muted);
-  font-weight: 700;
+  color: var(--buttermilk);
+  font-weight: 800;
   padding: 14px 16px;
-  background: var(--surface-2);
-  border-bottom: 1px solid var(--border);
+  background-color: var(--surface-2);
+  border-bottom: 1.5px solid var(--border-on-midnight);
 }
 
 td {
   padding: 14px 16px;
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid rgba(255, 242, 186, 0.2);
   vertical-align: middle;
+  color: #ffffff;
 }
 
 tr:hover td {
-  background: var(--surface-2);
+  background-color: var(--surface-2);
 }
 
 .file-cell {
@@ -1015,8 +993,8 @@ tr:hover td {
 }
 
 .fname {
-  font-weight: 600;
-  color: var(--text);
+  font-weight: 700;
+  color: var(--buttermilk);
   word-break: break-all;
 }
 
@@ -1025,54 +1003,49 @@ tr:hover td {
   align-items: center;
   gap: 6px;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 800;
   padding: 3px 10px;
   border-radius: var(--radius-pill);
 }
 
 .status.ok {
-  background: var(--ok-soft);
-  color: var(--ok);
+  background-color: var(--surface-2);
+  color: #4ade80;
+  border: 1px solid #4ade80;
 }
 
 .status.err {
-  background: var(--err-soft);
-  color: var(--err);
+  background-color: var(--surface-2);
+  color: #f87171;
+  border: 1px solid #f87171;
 }
 
 .status.busy {
-  background: var(--warn-soft);
-  color: var(--warn);
+  background-color: var(--surface-2);
+  color: #facc15;
+  border: 1px solid #facc15;
 }
 
-/* ---------- Modals (Google Photos Lightbox Style) ---------- */
+/* ---------- Modals ---------- */
 .modal-backdrop {
   position: fixed;
   inset: 0;
   z-index: 50;
-  background: rgba(11, 17, 15, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background-color: rgba(15, 60, 101, 0.75);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 24px;
-  animation: fadeIn 0.18s ease-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
 
 .modal {
   width: min(1200px, 100%);
   max-height: calc(100vh - 48px);
   overflow: auto;
-  background: var(--surface);
+  background-color: var(--midnight);
   border-radius: var(--radius-modal);
-  border: 1px solid var(--border);
-  box-shadow: 0 24px 64px -12px rgba(0, 0, 0, 0.35);
+  border: 2px solid var(--buttermilk);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
 }
@@ -1088,12 +1061,13 @@ tr:hover td {
   align-items: center;
   gap: 16px;
   padding: 20px 28px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 2px solid var(--border-on-midnight);
 }
 
 .modal-head h2 {
   font-size: 20px;
   word-break: break-all;
+  color: var(--buttermilk);
 }
 
 .modal-body {
@@ -1115,8 +1089,8 @@ tr:hover td {
   max-height: 72vh;
   object-fit: contain;
   border-radius: var(--radius);
-  background: var(--surface-2);
-  border: 1px solid var(--border);
+  background-color: var(--surface-2);
+  border: 1.5px solid var(--border-on-midnight);
 }
 
 .evidence-text, .extract {
@@ -1125,18 +1099,18 @@ tr:hover td {
   word-break: break-word;
   font-family: var(--font-mono);
   font-size: 13px;
-  background: var(--surface-2);
+  background-color: var(--surface-2);
   padding: 18px;
   border-radius: var(--radius);
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--border-on-midnight);
   line-height: 1.55;
-  color: var(--text-2);
+  color: #ffffff;
 }
 
 .pdf-frame {
   width: 100%;
   height: 72vh;
-  border: 1px solid var(--border);
+  border: 2px solid var(--border-on-midnight);
   border-radius: var(--radius);
   background: #fff;
 }
@@ -1152,7 +1126,7 @@ tr:hover td {
   max-height: 60vh;
   border-radius: var(--radius);
   background: #000;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border: 2px solid var(--border-on-midnight);
 }
 
 .player-actions {
@@ -1161,9 +1135,9 @@ tr:hover td {
   gap: 10px;
   align-items: center;
   padding: 12px 18px;
-  background: var(--surface-2);
+  background-color: var(--surface-2);
   border-radius: var(--radius-pill);
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--border-on-midnight);
 }
 
 .facts {
@@ -1171,15 +1145,15 @@ tr:hover td {
   flex-direction: column;
   gap: 16px;
   min-width: 0;
-  background: var(--surface-2);
+  background-color: var(--surface-2);
   padding: 22px;
   border-radius: var(--radius);
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--border-on-midnight);
 }
 
 .facts h4 {
   font-size: 12px;
-  color: var(--muted);
+  color: var(--buttermilk);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -1193,24 +1167,108 @@ tr:hover td {
 }
 
 .facts dt {
-  color: var(--muted);
-  font-weight: 500;
+  color: var(--muted-on-dark);
+  font-weight: 600;
 }
 
 .facts dd {
   margin: 0;
   word-break: break-word;
-  color: var(--text);
+  color: #ffffff;
   font-weight: 600;
 }
 
-/* ---------- Add Media (Dropzone) ---------- */
+/* ---------- About Modal ---------- */
+.modal.about {
+  width: min(880px, 100%);
+}
+
+.about-body {
+  padding: 20px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-body section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-body h4 {
+  font-size: 13px;
+  color: var(--buttermilk);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.about-body p {
+  margin: 0;
+  color: #ffffff;
+}
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 16px;
+  margin: 0;
+  font-size: 13.5px;
+}
+
+.facts-grid dt {
+  color: var(--muted-on-dark);
+  font-weight: 600;
+}
+
+.facts-grid dd {
+  margin: 0;
+  word-break: break-word;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--buttermilk);
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background-color: var(--surface-2);
+  color: var(--buttermilk);
+  padding: 2px 6px;
+  border-radius: 6px;
+  border: 1px solid var(--border-on-midnight);
+}
+
+.small {
+  font-size: 12.5px;
+}
+
+.muted {
+  color: var(--muted-on-dark);
+}
+
+/* ---------- Dropzone (Add Media) ---------- */
 .add-media {
   padding: 24px;
+  background-color: var(--midnight);
+  border-radius: var(--radius-card);
 }
 
 .dropzone {
-  border: 2px dashed var(--border);
+  border: 2px dashed var(--buttermilk);
   border-radius: var(--radius-modal);
   padding: 44px 24px;
   display: flex;
@@ -1219,14 +1277,12 @@ tr:hover td {
   gap: 12px;
   text-align: center;
   cursor: pointer;
-  color: var(--text-2);
-  transition: all var(--transition);
+  color: var(--buttermilk);
+  background-color: var(--surface-2);
 }
 
 .dropzone.drag, .dropzone:hover {
-  border-color: var(--accent);
-  background: var(--accent-soft);
-  color: var(--accent);
+  background-color: var(--surface-3);
 }
 
 .folder-row {
@@ -1234,22 +1290,22 @@ tr:hover td {
   align-items: center;
   gap: 12px;
   margin-top: 18px;
-  color: var(--muted);
+  color: var(--buttermilk);
 }
 
 .folder-row input {
   flex: 1;
   min-width: 0;
   padding: 10px 16px;
-  border: 1.5px solid var(--border);
+  border: 2px solid var(--border-on-midnight);
   border-radius: var(--radius-pill);
-  background: var(--surface);
-  color: var(--text);
+  background-color: var(--surface-2);
+  color: var(--buttermilk);
 }
 
 .folder-row input:focus {
-  border-color: var(--accent);
   outline: none;
+  border-color: var(--buttermilk);
 }
 
 /* ---------- Empty State ---------- */
@@ -1260,30 +1316,32 @@ tr:hover td {
   gap: 16px;
   padding: 72px 24px;
   text-align: center;
-  color: var(--text-2);
+  color: var(--muted-on-dark);
 }
 
 .empty-icon-wrap {
   width: 80px;
   height: 80px;
   border-radius: var(--radius-modal);
-  background: var(--surface-2);
+  background-color: var(--surface);
+  border: 1.5px solid var(--border-on-midnight);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--muted);
+  color: var(--buttermilk);
   margin-bottom: 8px;
 }
 
 .empty h2 {
   font-size: 24px;
-  color: var(--text);
+  color: var(--buttermilk);
 }
 
 .empty p {
   margin: 0;
   max-width: 480px;
   font-size: 15px;
+  font-weight: 600;
 }
 
 .notice {
@@ -1292,17 +1350,18 @@ tr:hover td {
   gap: 12px;
   padding: 14px 18px;
   border-radius: var(--radius-pill);
-  background: var(--surface-2);
-  color: var(--text-2);
-  border: 1px solid var(--border);
+  background-color: var(--surface);
+  color: var(--buttermilk);
+  border: 1.5px solid var(--border-on-midnight);
 }
 
 .foot {
   text-align: center;
   padding: 24px;
-  border-top: 1px solid var(--border-subtle);
-  color: var(--muted);
+  border-top: 1.5px solid var(--border);
+  color: var(--muted-on-dark);
   font-size: 13px;
+  font-weight: 700;
 }
 
 /* ---------- Responsive ---------- */
